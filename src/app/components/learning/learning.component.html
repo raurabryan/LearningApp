@@ -1,19 +1,19 @@
-<div>
+<div class = "container my-10">
     <h1>Cursos</h1>
     <p>Bienvenido al panel del Cursos </p>
-    <div *ngIf="learningData">
+    <div *ngIf="learningData" class ="card my-5">
         <h2>{{ learningData.name }}</h2>
-        <ul>
-            <li *ngFor="let student of learningData.students">
+        <ul class = "list-group">
+            <li class= "list-group-item" *ngFor="let student of learningData.students">
                 {{ student.name }} {{ student.surname }} ({{ student.identification }})
             </li>
         </ul>
     </div>
-    <div *ngIf="!learningData">
+    <div *ngIf="!learningData" class = "card-header">
         <p>No course data available.</p>
     </div>
 </div>
-<div>
+<div class = "card mx-5"  >
   <p>Componente cargado</p>
  
 </div>
