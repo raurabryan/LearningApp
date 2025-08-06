@@ -1,0 +1,19 @@
+<div>
+    <h1>Cursos</h1>
+    <p>Bienvenido al panel del Cursos </p>
+    <div *ngIf="learningData">
+        <h2>{{ learningData.name }}</h2>
+        <ul>
+            <li *ngFor="let student of learningData.students">
+                {{ student.name }} {{ student.surname }} ({{ student.identification }})
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="!learningData">
+        <p>No course data available.</p>
+    </div>
+</div>
+<div>
+  <p>Componente cargado</p>
+ 
+</div>
